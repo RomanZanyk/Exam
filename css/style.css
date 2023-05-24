@@ -1,0 +1,89 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+  .square {
+      width: 600px;
+      height: 450px;
+      border: 4px solid blue;
+      display: flex;
+      justify-content: space-between;
+  }
+  .block {
+      flex-grow: 1;
+      border-left: 3px solid #a5b1cd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px 0;
+  }
+  .block:first-child {
+      border-left: none;
+  }
+  .block:nth-child(3) {
+      border-left: 2px solid #d3d1e4;
+  }
+  .word {
+      position: relative;
+      font-size: 36px;
+      font-weight: bold;
+      left: 56px;
+      top: 30px;
+  }
+  .word:nth-child(2) {
+      left: 92px;
+      top: -110px;
+  }
+  .word:nth-child(3) {
+      top: -170px;
+  }
+  .word:nth-child(2)::before, .word:nth-child(1)::before {
+      content: "";
+      position: absolute;
+      right: 205px;
+      width: 36px;
+      height: 36px;
+      background-color: blue;
+  }
+  .word:nth-child(3)::after {
+      content: "";
+      position: absolute;
+      left: 90px;
+      width: 36px;
+      height: 36px;
+      background-color: blue;
+  }
+  .word2 {
+      position: relative;
+      font-size: 36px;
+      font-weight: bold;
+      left: 56px;
+      top: 70px;
+  }
+  .word3 {
+      position: relative;
+      font-size: 36px;
+      font-weight: bold;
+      left: 56px;
+      top: 200px;
+  }
+
+  .word3::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    width: 36px;
+    height: 36px;
+    background-color: blue;
+    z-index: -1;
+}
+
+.word2::before {
+  content: "";
+  position: absolute;
+  left: 55px;
+  top: -10px;
+  width: 36px;
+  height: 36px;
+  background-color: blue;
+  z-index: -1;
+}
